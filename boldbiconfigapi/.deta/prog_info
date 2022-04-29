@@ -1,0 +1,1 @@
+{"id":"1b7873e4-32d9-4ff1-b02a-c9dee0281e6c","space":1293,"runtime":"nodejs14.x","name":"boldbiconfigapi","path":"fcmsi9","project":"a0f24j3l","account":"144798365827","region":"eu-west-2","deps":["deta@^1.1.0","express@^4.17.3","uuidv5@^1.0.0","axios@^0.27.2","cors@^2.8.5"],"envs":null,"public":true,"log_level":"debug","cron":""}
