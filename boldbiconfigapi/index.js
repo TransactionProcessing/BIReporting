@@ -45,6 +45,25 @@ app.get('/boldBI/connectionString', async function(req,res)
     //identityType
     
     var key = req.headers['customidentity'];
+    console.log(key);
+
+    if (key === undefined)
+    {
+        // Return a default config
+        var responseObject =     {
+            Status: true,
+            Message: "Success",
+            Data: {
+                    DataSource: '127.0.0.1',
+                    InitialCatalog: 'EstateReportingReadModel435613ac-a468-47a3-ac4f-649d89764c22',
+                    IntegratedSecurity: "true",
+                    AdvancedSettings: "",
+                    CommandTimeout: 300
+            }
+          };
+          res.status(200).send(responseObject);
+          return;          
+    }
 
     // Do a lookup to get the config required
     var config = await boldBIConfigDatabase.get(key);
